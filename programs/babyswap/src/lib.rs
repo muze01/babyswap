@@ -1,7 +1,6 @@
 use anchor_lang::{
     prelude::*, solana_program::program::*,
     solana_program::program_pack::Pack, 
-    // solana_program::pubkey,
 };
 use anchor_spl::{
     associated_token::*,
@@ -17,7 +16,6 @@ declare_id!("4hfWrBXXKKYuQ91bjfAiccq3WTJjWkuYjiwuHK8Xmmmr");
 mod babyswap {
     use super::*;
 
-    // #[inline(never)]
     pub fn initialize_pool(ctx: Context<InitializePool>, fee: u64) -> Result<()> {
         
         // Fee Should Be 3% Max
@@ -32,7 +30,6 @@ mod babyswap {
         let (pool_pda_1, _) = Pubkey::find_program_address(
             &[
             b"pool", 
-            // mint_a.as_ref(), 
             mint_b.as_ref()
             ], 
             ctx.program_id
@@ -57,9 +54,8 @@ mod babyswap {
         Ok(())
     }
 
-    // #[inline(never)]
+    // 
     pub fn buy(ctx: Context<BuyInstruction>, swap: BuyInstructionData) -> Result<()> {
-        msg!("WASH P HOW FAR, NA POXXIE");
 
         // Validate slippage
         let slippage = swap.slippage;
@@ -140,7 +136,6 @@ mod babyswap {
         // Prepare signer seeds
         let seeds: &[&[u8]] = &[
             b"pool",
-            // mint_a.as_ref(),
             mint_b.as_ref(),
             &[ctx.bumps.pool],
         ];
@@ -235,7 +230,6 @@ mod babyswap {
     }
     
     pub fn sell(ctx: Context<SellInstruction>, swap: SellInstructionData) -> Result<()> {
-        msg!("WASH P HOW FAR, NA STILL POXXIE");
 
         // Validate slippage
         let slippage = swap.slippage;
@@ -319,7 +313,7 @@ mod babyswap {
         // Prepare signer seeds
         let seeds: &[&[u8]] = &[
             b"pool",
-            // mint_a.as_ref(),
+            
             mint_b.as_ref(),
             &[ctx.bumps.pool],
         ];
@@ -413,7 +407,7 @@ mod babyswap {
         Ok(())
     }
 
-    // #[inline(never)]
+    // 
     pub fn add_liquidity(ctx: Context<AddLiquidity>,  amount_one: u64, amount_two: u64) -> Result<()> {
         // you have to create checks for some of these params like fee
         let pool = &mut ctx.accounts.pool;
@@ -464,7 +458,6 @@ mod babyswap {
 
         let seeds: &[&[u8]] = &[
             b"pool",
-            // mint_a.as_ref(),
             mint_b.as_ref(),
             &[ctx.bumps.pool],
         ];
@@ -545,7 +538,7 @@ mod babyswap {
         Ok(())
     }
 
-    // #[inline(never)]
+    // 
     pub fn remove_liquidity(ctx: Context<RemoveLiquidity>, liquidity: u64) -> Result<()> {
         let pool = &mut ctx.accounts.pool;
         let lp_amount = liquidity as u128;
@@ -586,7 +579,6 @@ mod babyswap {
         // Define PDA seeds for signing
         let seeds: &[&[u8]] = &[
             b"pool",
-            // mint_a.as_ref(),
             mint_b.as_ref(),
             &[ctx.bumps.pool],
         ];
@@ -669,7 +661,6 @@ pub struct RemoveLiquidity<'info> {
         has_one = lp_mint @ ErrorCode::InvalidLPMint,
         seeds = [
             b"pool", 
-            // mint_a.key().as_ref(), 
             mint_b.key().as_ref()
         ],
         bump,
@@ -743,7 +734,6 @@ pub struct InitializePool<'info> {
         init,
         seeds = [
             b"pool",
-            // mint_a.key().as_ref(),
             mint_b.key().as_ref()
         ],
         bump,
@@ -786,7 +776,6 @@ pub struct AddLiquidity<'info> {
         mut, 
         seeds = [
             b"pool", 
-            // mint_a.key().as_ref(),
             mint_b.key().as_ref()
         ], 
         bump,
@@ -929,7 +918,6 @@ pub struct BuyInstruction<'info> {
         mut,
         seeds = [
             b"pool", 
-            // mint_a.key().as_ref(), 
             mint_b.key().as_ref()
         ], 
         bump,
