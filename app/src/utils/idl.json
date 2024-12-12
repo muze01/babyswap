@@ -1,0 +1,1925 @@
+{
+    "address": "4hfWrBXXKKYuQ91bjfAiccq3WTJjWkuYjiwuHK8Xmmmr",
+    "metadata": {
+        "name": "soondex",
+        "version": "0.1.0",
+        "spec": "0.1.0",
+        "description": "Created with Anchor"
+    },
+    "instructions": [
+        {
+            "name": "add_liquidity",
+            "discriminator": [
+                181,
+                157,
+                89,
+                67,
+                143,
+                182,
+                52,
+                72
+            ],
+            "accounts": [
+                {
+                    "name": "pool",
+                    "writable": true,
+                    "pda": {
+                        "seeds": [
+                            {
+                                "kind": "const",
+                                "value": [
+                                    112,
+                                    111,
+                                    111,
+                                    108
+                                ]
+                            },
+                            {
+                                "kind": "account",
+                                "path": "mint_b"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "mint_a",
+                    "writable": true
+                },
+                {
+                    "name": "mint_b",
+                    "writable": true
+                },
+                {
+                    "name": "user_token_a",
+                    "writable": true
+                },
+                {
+                    "name": "user_token_b",
+                    "writable": true
+                },
+                {
+                    "name": "pool_token_a",
+                    "writable": true,
+                    "pda": {
+                        "seeds": [
+                            {
+                                "kind": "account",
+                                "path": "pool"
+                            },
+                            {
+                                "kind": "const",
+                                "value": [
+                                    6,
+                                    221,
+                                    246,
+                                    225,
+                                    215,
+                                    101,
+                                    161,
+                                    147,
+                                    217,
+                                    203,
+                                    225,
+                                    70,
+                                    206,
+                                    235,
+                                    121,
+                                    172,
+                                    28,
+                                    180,
+                                    133,
+                                    237,
+                                    95,
+                                    91,
+                                    55,
+                                    145,
+                                    58,
+                                    140,
+                                    245,
+                                    133,
+                                    126,
+                                    255,
+                                    0,
+                                    169
+                                ]
+                            },
+                            {
+                                "kind": "account",
+                                "path": "mint_a"
+                            }
+                        ],
+                        "program": {
+                            "kind": "const",
+                            "value": [
+                                140,
+                                151,
+                                37,
+                                143,
+                                78,
+                                36,
+                                137,
+                                241,
+                                187,
+                                61,
+                                16,
+                                41,
+                                20,
+                                142,
+                                13,
+                                131,
+                                11,
+                                90,
+                                19,
+                                153,
+                                218,
+                                255,
+                                16,
+                                132,
+                                4,
+                                142,
+                                123,
+                                216,
+                                219,
+                                233,
+                                248,
+                                89
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "pool_token_b",
+                    "writable": true,
+                    "pda": {
+                        "seeds": [
+                            {
+                                "kind": "account",
+                                "path": "pool"
+                            },
+                            {
+                                "kind": "const",
+                                "value": [
+                                    6,
+                                    221,
+                                    246,
+                                    225,
+                                    215,
+                                    101,
+                                    161,
+                                    147,
+                                    217,
+                                    203,
+                                    225,
+                                    70,
+                                    206,
+                                    235,
+                                    121,
+                                    172,
+                                    28,
+                                    180,
+                                    133,
+                                    237,
+                                    95,
+                                    91,
+                                    55,
+                                    145,
+                                    58,
+                                    140,
+                                    245,
+                                    133,
+                                    126,
+                                    255,
+                                    0,
+                                    169
+                                ]
+                            },
+                            {
+                                "kind": "account",
+                                "path": "mint_b"
+                            }
+                        ],
+                        "program": {
+                            "kind": "const",
+                            "value": [
+                                140,
+                                151,
+                                37,
+                                143,
+                                78,
+                                36,
+                                137,
+                                241,
+                                187,
+                                61,
+                                16,
+                                41,
+                                20,
+                                142,
+                                13,
+                                131,
+                                11,
+                                90,
+                                19,
+                                153,
+                                218,
+                                255,
+                                16,
+                                132,
+                                4,
+                                142,
+                                123,
+                                216,
+                                219,
+                                233,
+                                248,
+                                89
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "lp_mint",
+                    "writable": true
+                },
+                {
+                    "name": "user_lp_token_account",
+                    "writable": true,
+                    "pda": {
+                        "seeds": [
+                            {
+                                "kind": "account",
+                                "path": "user"
+                            },
+                            {
+                                "kind": "const",
+                                "value": [
+                                    6,
+                                    221,
+                                    246,
+                                    225,
+                                    215,
+                                    101,
+                                    161,
+                                    147,
+                                    217,
+                                    203,
+                                    225,
+                                    70,
+                                    206,
+                                    235,
+                                    121,
+                                    172,
+                                    28,
+                                    180,
+                                    133,
+                                    237,
+                                    95,
+                                    91,
+                                    55,
+                                    145,
+                                    58,
+                                    140,
+                                    245,
+                                    133,
+                                    126,
+                                    255,
+                                    0,
+                                    169
+                                ]
+                            },
+                            {
+                                "kind": "account",
+                                "path": "lp_mint"
+                            }
+                        ],
+                        "program": {
+                            "kind": "const",
+                            "value": [
+                                140,
+                                151,
+                                37,
+                                143,
+                                78,
+                                36,
+                                137,
+                                241,
+                                187,
+                                61,
+                                16,
+                                41,
+                                20,
+                                142,
+                                13,
+                                131,
+                                11,
+                                90,
+                                19,
+                                153,
+                                218,
+                                255,
+                                16,
+                                132,
+                                4,
+                                142,
+                                123,
+                                216,
+                                219,
+                                233,
+                                248,
+                                89
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "user",
+                    "writable": true,
+                    "signer": true
+                },
+                {
+                    "name": "system_program",
+                    "address": "11111111111111111111111111111111"
+                },
+                {
+                    "name": "token_program",
+                    "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+                },
+                {
+                    "name": "associated_token_program",
+                    "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+                },
+                {
+                    "name": "rent",
+                    "address": "SysvarRent111111111111111111111111111111111"
+                }
+            ],
+            "args": [
+                {
+                    "name": "amount_one",
+                    "type": "u64"
+                },
+                {
+                    "name": "amount_two",
+                    "type": "u64"
+                }
+            ]
+        },
+        {
+            "name": "buy",
+            "discriminator": [
+                102,
+                6,
+                61,
+                18,
+                1,
+                218,
+                235,
+                234
+            ],
+            "accounts": [
+                {
+                    "name": "pool",
+                    "writable": true,
+                    "pda": {
+                        "seeds": [
+                            {
+                                "kind": "const",
+                                "value": [
+                                    112,
+                                    111,
+                                    111,
+                                    108
+                                ]
+                            },
+                            {
+                                "kind": "account",
+                                "path": "mint_b"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "mint_a",
+                    "writable": true
+                },
+                {
+                    "name": "mint_b",
+                    "writable": true
+                },
+                {
+                    "name": "pool_token_a_ata",
+                    "writable": true,
+                    "pda": {
+                        "seeds": [
+                            {
+                                "kind": "account",
+                                "path": "pool"
+                            },
+                            {
+                                "kind": "const",
+                                "value": [
+                                    6,
+                                    221,
+                                    246,
+                                    225,
+                                    215,
+                                    101,
+                                    161,
+                                    147,
+                                    217,
+                                    203,
+                                    225,
+                                    70,
+                                    206,
+                                    235,
+                                    121,
+                                    172,
+                                    28,
+                                    180,
+                                    133,
+                                    237,
+                                    95,
+                                    91,
+                                    55,
+                                    145,
+                                    58,
+                                    140,
+                                    245,
+                                    133,
+                                    126,
+                                    255,
+                                    0,
+                                    169
+                                ]
+                            },
+                            {
+                                "kind": "account",
+                                "path": "mint_a"
+                            }
+                        ],
+                        "program": {
+                            "kind": "const",
+                            "value": [
+                                140,
+                                151,
+                                37,
+                                143,
+                                78,
+                                36,
+                                137,
+                                241,
+                                187,
+                                61,
+                                16,
+                                41,
+                                20,
+                                142,
+                                13,
+                                131,
+                                11,
+                                90,
+                                19,
+                                153,
+                                218,
+                                255,
+                                16,
+                                132,
+                                4,
+                                142,
+                                123,
+                                216,
+                                219,
+                                233,
+                                248,
+                                89
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "pool_token_b_ata",
+                    "writable": true,
+                    "pda": {
+                        "seeds": [
+                            {
+                                "kind": "account",
+                                "path": "pool"
+                            },
+                            {
+                                "kind": "const",
+                                "value": [
+                                    6,
+                                    221,
+                                    246,
+                                    225,
+                                    215,
+                                    101,
+                                    161,
+                                    147,
+                                    217,
+                                    203,
+                                    225,
+                                    70,
+                                    206,
+                                    235,
+                                    121,
+                                    172,
+                                    28,
+                                    180,
+                                    133,
+                                    237,
+                                    95,
+                                    91,
+                                    55,
+                                    145,
+                                    58,
+                                    140,
+                                    245,
+                                    133,
+                                    126,
+                                    255,
+                                    0,
+                                    169
+                                ]
+                            },
+                            {
+                                "kind": "account",
+                                "path": "mint_b"
+                            }
+                        ],
+                        "program": {
+                            "kind": "const",
+                            "value": [
+                                140,
+                                151,
+                                37,
+                                143,
+                                78,
+                                36,
+                                137,
+                                241,
+                                187,
+                                61,
+                                16,
+                                41,
+                                20,
+                                142,
+                                13,
+                                131,
+                                11,
+                                90,
+                                19,
+                                153,
+                                218,
+                                255,
+                                16,
+                                132,
+                                4,
+                                142,
+                                123,
+                                216,
+                                219,
+                                233,
+                                248,
+                                89
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "user_token_a_ata",
+                    "writable": true,
+                    "pda": {
+                        "seeds": [
+                            {
+                                "kind": "account",
+                                "path": "user"
+                            },
+                            {
+                                "kind": "const",
+                                "value": [
+                                    6,
+                                    221,
+                                    246,
+                                    225,
+                                    215,
+                                    101,
+                                    161,
+                                    147,
+                                    217,
+                                    203,
+                                    225,
+                                    70,
+                                    206,
+                                    235,
+                                    121,
+                                    172,
+                                    28,
+                                    180,
+                                    133,
+                                    237,
+                                    95,
+                                    91,
+                                    55,
+                                    145,
+                                    58,
+                                    140,
+                                    245,
+                                    133,
+                                    126,
+                                    255,
+                                    0,
+                                    169
+                                ]
+                            },
+                            {
+                                "kind": "account",
+                                "path": "mint_a"
+                            }
+                        ],
+                        "program": {
+                            "kind": "const",
+                            "value": [
+                                140,
+                                151,
+                                37,
+                                143,
+                                78,
+                                36,
+                                137,
+                                241,
+                                187,
+                                61,
+                                16,
+                                41,
+                                20,
+                                142,
+                                13,
+                                131,
+                                11,
+                                90,
+                                19,
+                                153,
+                                218,
+                                255,
+                                16,
+                                132,
+                                4,
+                                142,
+                                123,
+                                216,
+                                219,
+                                233,
+                                248,
+                                89
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "user_token_b_ata",
+                    "writable": true,
+                    "pda": {
+                        "seeds": [
+                            {
+                                "kind": "account",
+                                "path": "user"
+                            },
+                            {
+                                "kind": "const",
+                                "value": [
+                                    6,
+                                    221,
+                                    246,
+                                    225,
+                                    215,
+                                    101,
+                                    161,
+                                    147,
+                                    217,
+                                    203,
+                                    225,
+                                    70,
+                                    206,
+                                    235,
+                                    121,
+                                    172,
+                                    28,
+                                    180,
+                                    133,
+                                    237,
+                                    95,
+                                    91,
+                                    55,
+                                    145,
+                                    58,
+                                    140,
+                                    245,
+                                    133,
+                                    126,
+                                    255,
+                                    0,
+                                    169
+                                ]
+                            },
+                            {
+                                "kind": "account",
+                                "path": "mint_b"
+                            }
+                        ],
+                        "program": {
+                            "kind": "const",
+                            "value": [
+                                140,
+                                151,
+                                37,
+                                143,
+                                78,
+                                36,
+                                137,
+                                241,
+                                187,
+                                61,
+                                16,
+                                41,
+                                20,
+                                142,
+                                13,
+                                131,
+                                11,
+                                90,
+                                19,
+                                153,
+                                218,
+                                255,
+                                16,
+                                132,
+                                4,
+                                142,
+                                123,
+                                216,
+                                219,
+                                233,
+                                248,
+                                89
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "user",
+                    "writable": true,
+                    "signer": true
+                },
+                {
+                    "name": "rent",
+                    "address": "SysvarRent111111111111111111111111111111111"
+                },
+                {
+                    "name": "system_program",
+                    "address": "11111111111111111111111111111111"
+                },
+                {
+                    "name": "token_program",
+                    "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+                },
+                {
+                    "name": "associated_token_program",
+                    "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+                }
+            ],
+            "args": [
+                {
+                    "name": "swap",
+                    "type": {
+                        "defined": {
+                            "name": "BuyInstructionData"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "initialize_pool",
+            "discriminator": [
+                95,
+                180,
+                10,
+                172,
+                84,
+                174,
+                232,
+                40
+            ],
+            "accounts": [
+                {
+                    "name": "pool",
+                    "writable": true,
+                    "pda": {
+                        "seeds": [
+                            {
+                                "kind": "const",
+                                "value": [
+                                    112,
+                                    111,
+                                    111,
+                                    108
+                                ]
+                            },
+                            {
+                                "kind": "account",
+                                "path": "mint_b"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "mint_a"
+                },
+                {
+                    "name": "mint_b"
+                },
+                {
+                    "name": "pool_token_a",
+                    "writable": true,
+                    "pda": {
+                        "seeds": [
+                            {
+                                "kind": "account",
+                                "path": "pool"
+                            },
+                            {
+                                "kind": "const",
+                                "value": [
+                                    6,
+                                    221,
+                                    246,
+                                    225,
+                                    215,
+                                    101,
+                                    161,
+                                    147,
+                                    217,
+                                    203,
+                                    225,
+                                    70,
+                                    206,
+                                    235,
+                                    121,
+                                    172,
+                                    28,
+                                    180,
+                                    133,
+                                    237,
+                                    95,
+                                    91,
+                                    55,
+                                    145,
+                                    58,
+                                    140,
+                                    245,
+                                    133,
+                                    126,
+                                    255,
+                                    0,
+                                    169
+                                ]
+                            },
+                            {
+                                "kind": "account",
+                                "path": "mint_a"
+                            }
+                        ],
+                        "program": {
+                            "kind": "const",
+                            "value": [
+                                140,
+                                151,
+                                37,
+                                143,
+                                78,
+                                36,
+                                137,
+                                241,
+                                187,
+                                61,
+                                16,
+                                41,
+                                20,
+                                142,
+                                13,
+                                131,
+                                11,
+                                90,
+                                19,
+                                153,
+                                218,
+                                255,
+                                16,
+                                132,
+                                4,
+                                142,
+                                123,
+                                216,
+                                219,
+                                233,
+                                248,
+                                89
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "pool_token_b",
+                    "writable": true,
+                    "pda": {
+                        "seeds": [
+                            {
+                                "kind": "account",
+                                "path": "pool"
+                            },
+                            {
+                                "kind": "const",
+                                "value": [
+                                    6,
+                                    221,
+                                    246,
+                                    225,
+                                    215,
+                                    101,
+                                    161,
+                                    147,
+                                    217,
+                                    203,
+                                    225,
+                                    70,
+                                    206,
+                                    235,
+                                    121,
+                                    172,
+                                    28,
+                                    180,
+                                    133,
+                                    237,
+                                    95,
+                                    91,
+                                    55,
+                                    145,
+                                    58,
+                                    140,
+                                    245,
+                                    133,
+                                    126,
+                                    255,
+                                    0,
+                                    169
+                                ]
+                            },
+                            {
+                                "kind": "account",
+                                "path": "mint_b"
+                            }
+                        ],
+                        "program": {
+                            "kind": "const",
+                            "value": [
+                                140,
+                                151,
+                                37,
+                                143,
+                                78,
+                                36,
+                                137,
+                                241,
+                                187,
+                                61,
+                                16,
+                                41,
+                                20,
+                                142,
+                                13,
+                                131,
+                                11,
+                                90,
+                                19,
+                                153,
+                                218,
+                                255,
+                                16,
+                                132,
+                                4,
+                                142,
+                                123,
+                                216,
+                                219,
+                                233,
+                                248,
+                                89
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "user",
+                    "writable": true,
+                    "signer": true
+                },
+                {
+                    "name": "system_program",
+                    "address": "11111111111111111111111111111111"
+                },
+                {
+                    "name": "token_program",
+                    "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+                },
+                {
+                    "name": "associated_token_program",
+                    "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+                },
+                {
+                    "name": "rent",
+                    "address": "SysvarRent111111111111111111111111111111111"
+                }
+            ],
+            "args": [
+                {
+                    "name": "fee",
+                    "type": "u64"
+                }
+            ]
+        },
+        {
+            "name": "remove_liquidity",
+            "discriminator": [
+                80,
+                85,
+                209,
+                72,
+                24,
+                206,
+                177,
+                108
+            ],
+            "accounts": [
+                {
+                    "name": "pool",
+                    "writable": true,
+                    "pda": {
+                        "seeds": [
+                            {
+                                "kind": "const",
+                                "value": [
+                                    112,
+                                    111,
+                                    111,
+                                    108
+                                ]
+                            },
+                            {
+                                "kind": "account",
+                                "path": "mint_a"
+                            },
+                            {
+                                "kind": "account",
+                                "path": "mint_b"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "mint_a",
+                    "writable": true
+                },
+                {
+                    "name": "mint_b",
+                    "writable": true
+                },
+                {
+                    "name": "pool_token_a",
+                    "writable": true
+                },
+                {
+                    "name": "pool_token_b",
+                    "writable": true
+                },
+                {
+                    "name": "lp_mint",
+                    "writable": true,
+                    "relations": [
+                        "pool"
+                    ]
+                },
+                {
+                    "name": "user_token_a",
+                    "writable": true
+                },
+                {
+                    "name": "user_token_b",
+                    "writable": true
+                },
+                {
+                    "name": "user_lp_token_account",
+                    "writable": true
+                },
+                {
+                    "name": "user",
+                    "writable": true,
+                    "signer": true
+                },
+                {
+                    "name": "token_program",
+                    "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+                },
+                {
+                    "name": "system_program",
+                    "address": "11111111111111111111111111111111"
+                },
+                {
+                    "name": "associated_token_program",
+                    "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+                },
+                {
+                    "name": "rent",
+                    "address": "SysvarRent111111111111111111111111111111111"
+                }
+            ],
+            "args": [
+                {
+                    "name": "liquidity",
+                    "type": "u64"
+                }
+            ]
+        },
+        {
+            "name": "sell",
+            "discriminator": [
+                51,
+                230,
+                133,
+                164,
+                1,
+                127,
+                131,
+                173
+            ],
+            "accounts": [
+                {
+                    "name": "pool",
+                    "writable": true,
+                    "pda": {
+                        "seeds": [
+                            {
+                                "kind": "const",
+                                "value": [
+                                    112,
+                                    111,
+                                    111,
+                                    108
+                                ]
+                            },
+                            {
+                                "kind": "account",
+                                "path": "mint_a"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "mint_a",
+                    "writable": true
+                },
+                {
+                    "name": "mint_b",
+                    "writable": true
+                },
+                {
+                    "name": "pool_token_a_ata",
+                    "writable": true,
+                    "pda": {
+                        "seeds": [
+                            {
+                                "kind": "account",
+                                "path": "pool"
+                            },
+                            {
+                                "kind": "const",
+                                "value": [
+                                    6,
+                                    221,
+                                    246,
+                                    225,
+                                    215,
+                                    101,
+                                    161,
+                                    147,
+                                    217,
+                                    203,
+                                    225,
+                                    70,
+                                    206,
+                                    235,
+                                    121,
+                                    172,
+                                    28,
+                                    180,
+                                    133,
+                                    237,
+                                    95,
+                                    91,
+                                    55,
+                                    145,
+                                    58,
+                                    140,
+                                    245,
+                                    133,
+                                    126,
+                                    255,
+                                    0,
+                                    169
+                                ]
+                            },
+                            {
+                                "kind": "account",
+                                "path": "mint_a"
+                            }
+                        ],
+                        "program": {
+                            "kind": "const",
+                            "value": [
+                                140,
+                                151,
+                                37,
+                                143,
+                                78,
+                                36,
+                                137,
+                                241,
+                                187,
+                                61,
+                                16,
+                                41,
+                                20,
+                                142,
+                                13,
+                                131,
+                                11,
+                                90,
+                                19,
+                                153,
+                                218,
+                                255,
+                                16,
+                                132,
+                                4,
+                                142,
+                                123,
+                                216,
+                                219,
+                                233,
+                                248,
+                                89
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "pool_token_b_ata",
+                    "writable": true,
+                    "pda": {
+                        "seeds": [
+                            {
+                                "kind": "account",
+                                "path": "pool"
+                            },
+                            {
+                                "kind": "const",
+                                "value": [
+                                    6,
+                                    221,
+                                    246,
+                                    225,
+                                    215,
+                                    101,
+                                    161,
+                                    147,
+                                    217,
+                                    203,
+                                    225,
+                                    70,
+                                    206,
+                                    235,
+                                    121,
+                                    172,
+                                    28,
+                                    180,
+                                    133,
+                                    237,
+                                    95,
+                                    91,
+                                    55,
+                                    145,
+                                    58,
+                                    140,
+                                    245,
+                                    133,
+                                    126,
+                                    255,
+                                    0,
+                                    169
+                                ]
+                            },
+                            {
+                                "kind": "account",
+                                "path": "mint_b"
+                            }
+                        ],
+                        "program": {
+                            "kind": "const",
+                            "value": [
+                                140,
+                                151,
+                                37,
+                                143,
+                                78,
+                                36,
+                                137,
+                                241,
+                                187,
+                                61,
+                                16,
+                                41,
+                                20,
+                                142,
+                                13,
+                                131,
+                                11,
+                                90,
+                                19,
+                                153,
+                                218,
+                                255,
+                                16,
+                                132,
+                                4,
+                                142,
+                                123,
+                                216,
+                                219,
+                                233,
+                                248,
+                                89
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "user_token_a_ata",
+                    "writable": true,
+                    "pda": {
+                        "seeds": [
+                            {
+                                "kind": "account",
+                                "path": "user"
+                            },
+                            {
+                                "kind": "const",
+                                "value": [
+                                    6,
+                                    221,
+                                    246,
+                                    225,
+                                    215,
+                                    101,
+                                    161,
+                                    147,
+                                    217,
+                                    203,
+                                    225,
+                                    70,
+                                    206,
+                                    235,
+                                    121,
+                                    172,
+                                    28,
+                                    180,
+                                    133,
+                                    237,
+                                    95,
+                                    91,
+                                    55,
+                                    145,
+                                    58,
+                                    140,
+                                    245,
+                                    133,
+                                    126,
+                                    255,
+                                    0,
+                                    169
+                                ]
+                            },
+                            {
+                                "kind": "account",
+                                "path": "mint_a"
+                            }
+                        ],
+                        "program": {
+                            "kind": "const",
+                            "value": [
+                                140,
+                                151,
+                                37,
+                                143,
+                                78,
+                                36,
+                                137,
+                                241,
+                                187,
+                                61,
+                                16,
+                                41,
+                                20,
+                                142,
+                                13,
+                                131,
+                                11,
+                                90,
+                                19,
+                                153,
+                                218,
+                                255,
+                                16,
+                                132,
+                                4,
+                                142,
+                                123,
+                                216,
+                                219,
+                                233,
+                                248,
+                                89
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "user_token_b_ata",
+                    "writable": true,
+                    "pda": {
+                        "seeds": [
+                            {
+                                "kind": "account",
+                                "path": "user"
+                            },
+                            {
+                                "kind": "const",
+                                "value": [
+                                    6,
+                                    221,
+                                    246,
+                                    225,
+                                    215,
+                                    101,
+                                    161,
+                                    147,
+                                    217,
+                                    203,
+                                    225,
+                                    70,
+                                    206,
+                                    235,
+                                    121,
+                                    172,
+                                    28,
+                                    180,
+                                    133,
+                                    237,
+                                    95,
+                                    91,
+                                    55,
+                                    145,
+                                    58,
+                                    140,
+                                    245,
+                                    133,
+                                    126,
+                                    255,
+                                    0,
+                                    169
+                                ]
+                            },
+                            {
+                                "kind": "account",
+                                "path": "mint_b"
+                            }
+                        ],
+                        "program": {
+                            "kind": "const",
+                            "value": [
+                                140,
+                                151,
+                                37,
+                                143,
+                                78,
+                                36,
+                                137,
+                                241,
+                                187,
+                                61,
+                                16,
+                                41,
+                                20,
+                                142,
+                                13,
+                                131,
+                                11,
+                                90,
+                                19,
+                                153,
+                                218,
+                                255,
+                                16,
+                                132,
+                                4,
+                                142,
+                                123,
+                                216,
+                                219,
+                                233,
+                                248,
+                                89
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "user",
+                    "writable": true,
+                    "signer": true
+                },
+                {
+                    "name": "rent",
+                    "address": "SysvarRent111111111111111111111111111111111"
+                },
+                {
+                    "name": "system_program",
+                    "address": "11111111111111111111111111111111"
+                },
+                {
+                    "name": "token_program",
+                    "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+                },
+                {
+                    "name": "associated_token_program",
+                    "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+                }
+            ],
+            "args": [
+                {
+                    "name": "swap",
+                    "type": {
+                        "defined": {
+                            "name": "SellInstructionData"
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "accounts": [
+        {
+            "name": "PoolInfo",
+            "discriminator": [
+                18,
+                19,
+                191,
+                60,
+                244,
+                139,
+                177,
+                235
+            ]
+        }
+    ],
+    "errors": [
+        {
+            "code": 6000,
+            "name": "MinPoolBalanceReached"
+        },
+        {
+            "code": 6001,
+            "name": "PoolNotInitialized"
+        },
+        {
+            "code": 6002,
+            "name": "InsufficientLiquidity"
+        },
+        {
+            "code": 6003,
+            "name": "ConstantProductInvariantViolated"
+        },
+        {
+            "code": 6004,
+            "name": "ZeroReserve"
+        },
+        {
+            "code": 6005,
+            "name": "PoolFrozen"
+        },
+        {
+            "code": 6006,
+            "name": "InsufficientFunds"
+        },
+        {
+            "code": 6007,
+            "name": "InsufficientOutputAmount"
+        },
+        {
+            "code": 6008,
+            "name": "InvalidDecimals"
+        },
+        {
+            "code": 6009,
+            "name": "EmptyInstructionData"
+        },
+        {
+            "code": 6010,
+            "name": "InvalidInstruction"
+        },
+        {
+            "code": 6011,
+            "name": "InvalidInstructionLength"
+        },
+        {
+            "code": 6012,
+            "name": "ArithmeticOverflow"
+        },
+        {
+            "code": 6013,
+            "name": "InvalidCalculatedAmount"
+        },
+        {
+            "code": 6014,
+            "name": "InsufficientPoolTokenA"
+        },
+        {
+            "code": 6015,
+            "name": "InsufficientPoolTokenB"
+        },
+        {
+            "code": 6016,
+            "name": "InsufficientSolBalance"
+        },
+        {
+            "code": 6017,
+            "name": "InvalidSolAmount"
+        },
+        {
+            "code": 6018,
+            "name": "SolAmountTooMuch"
+        },
+        {
+            "code": 6019,
+            "name": "TokenInfoNotFound"
+        },
+        {
+            "code": 6020,
+            "name": "IntegerOverflowMinOutputAmount"
+        },
+        {
+            "code": 6021,
+            "name": "IntegerOverflowSlippageValue"
+        },
+        {
+            "code": 6022,
+            "name": "IntegerOverflowNetOutputAmount"
+        },
+        {
+            "code": 6023,
+            "name": "IntegerOverflowNewOutputReserve"
+        },
+        {
+            "code": 6024,
+            "name": "OverflowRemoveLiquidityA"
+        },
+        {
+            "code": 6025,
+            "name": "OverflowRemoveLiquidityB"
+        },
+        {
+            "code": 6026,
+            "name": "IntegerOverflowK"
+        },
+        {
+            "code": 6027,
+            "name": "InvalidSwapAmount"
+        },
+        {
+            "code": 6028,
+            "name": "IntegerOverflowFeeAmount"
+        },
+        {
+            "code": 6029,
+            "name": "FeeTooHigh"
+        },
+        {
+            "code": 6030,
+            "name": "IntegerOverflowNetInput"
+        },
+        {
+            "code": 6031,
+            "name": "IntegerOverflowNewInputReserve"
+        },
+        {
+            "code": 6032,
+            "name": "OutputAmountTooMuch"
+        },
+        {
+            "code": 6033,
+            "name": "IntegerOverflow"
+        },
+        {
+            "code": 6034,
+            "name": "IntegerOverflow11"
+        },
+        {
+            "code": 6035,
+            "name": "IntegerOverflow12"
+        },
+        {
+            "code": 6036,
+            "name": "InvalidSlippageValue"
+        },
+        {
+            "code": 6037,
+            "name": "UserAccountNotBalanced"
+        },
+        {
+            "code": 6038,
+            "name": "TokenAmountTooMuch"
+        },
+        {
+            "code": 6039,
+            "name": "InvalidAmount"
+        },
+        {
+            "code": 6040,
+            "name": "InsufficientTokenABalance"
+        },
+        {
+            "code": 6041,
+            "name": "InsufficientLPTokens"
+        },
+        {
+            "code": 6042,
+            "name": "InsufficientTokenBBalance"
+        },
+        {
+            "code": 6043,
+            "name": "Unauthorized"
+        },
+        {
+            "code": 6044,
+            "name": "Overflow"
+        },
+        {
+            "code": 6045,
+            "name": "InsufficientTokenB"
+        },
+        {
+            "code": 6046,
+            "name": "InvalidLPMint",
+            "msg": "Invalid LP mint account"
+        },
+        {
+            "code": 6047,
+            "name": "InvalidPoolTokenA",
+            "msg": "Invalid Pool Token A account"
+        },
+        {
+            "code": 6048,
+            "name": "InvalidPoolTokenB",
+            "msg": "Invalid Pool Token B account"
+        },
+        {
+            "code": 6049,
+            "name": "InvalidPoolTokenAOwner",
+            "msg": "Invalid Pool Token A owner"
+        },
+        {
+            "code": 6050,
+            "name": "InvalidPoolTokenBOwner",
+            "msg": "Invalid Pool Token B owner"
+        },
+        {
+            "code": 6051,
+            "name": "InvalidUserTokenA",
+            "msg": "Invalid User Token A account"
+        },
+        {
+            "code": 6052,
+            "name": "InvalidUserTokenB",
+            "msg": "Invalid User Token B account"
+        },
+        {
+            "code": 6053,
+            "name": "InvalidUserLPOwner",
+            "msg": "Invalid User LP Token account owner"
+        },
+        {
+            "code": 6054,
+            "name": "InvalidUserLPMint",
+            "msg": "Invalid User LP Token mint"
+        },
+        {
+            "code": 6055,
+            "name": "InvalidUserTokenAMint"
+        },
+        {
+            "code": 6056,
+            "name": "InvalidUserTokenBMint"
+        },
+        {
+            "code": 6057,
+            "name": "SameTokenPool"
+        },
+        {
+            "code": 6058,
+            "name": "InvalidTokenOrder"
+        }
+    ],
+    "types": [
+        {
+            "name": "BuyInstructionData",
+            "type": {
+                "kind": "struct",
+                "fields": [
+                    {
+                        "name": "amount",
+                        "type": "u64"
+                    },
+                    {
+                        "name": "slippage",
+                        "type": "u64"
+                    },
+                    {
+                        "name": "is_buy",
+                        "type": "bool"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "PoolInfo",
+            "type": {
+                "kind": "struct",
+                "fields": [
+                    {
+                        "name": "pool",
+                        "type": "pubkey"
+                    },
+                    {
+                        "name": "mint_a",
+                        "type": "pubkey"
+                    },
+                    {
+                        "name": "mint_b",
+                        "type": "pubkey"
+                    },
+                    {
+                        "name": "lp_mint",
+                        "type": "pubkey"
+                    },
+                    {
+                        "name": "fees",
+                        "type": "u64"
+                    },
+                    {
+                        "name": "total_liquidity",
+                        "type": "u128"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "SellInstructionData",
+            "type": {
+                "kind": "struct",
+                "fields": [
+                    {
+                        "name": "amount",
+                        "type": "u64"
+                    },
+                    {
+                        "name": "slippage",
+                        "type": "u64"
+                    },
+                    {
+                        "name": "is_buy",
+                        "type": "bool"
+                    }
+                ]
+            }
+        }
+    ]
+}
